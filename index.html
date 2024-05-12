@@ -6,6 +6,8 @@
     <title>HomePage</title>
     <link href="style.css" rel="stylesheet" type="text/css" >
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    style="width: 200px; height: 200px;">
 
 </head>
 <body>
@@ -16,13 +18,28 @@
         <a href="#playlist">My PLaylist</a>
         <a href="#like">Like</a>
         <a href="#qrcode">QR code</a>
-        <a href="#spa">SPA Q&A</a>
+        <a href="#spa">Q&A</a>
         <a href="#contact">Contact Me</a>
     </div>
 
     <section id="about" class="section">
         <h1 style="margin-top:60px">My Grandmother Miriam Hefetz</h1>
 
+        <p>
+
+          This page is dedicated to my Grandmother Miriam Hefetz.
+          <br>
+          Hope you will find this page entertaining 
+          <br>
+          If you have any questions or suggestions feel free to send an email with the mail provided at the bottom of the page
+          <br>
+          Have Fun ! :D 
+          
+        </p>
+
+        <img src="photos/grandma.PNG" style="width: 360px; height: 360 px;">
+
+        <section id="moreAbout">
         <h2> History and Life </h2>
         <p>
             She was born in Russia 1944 in city Bisk when she was 1 year old her parents return ot Polish, and she satyed 5 years in polin.
@@ -49,6 +66,7 @@
         <p>She very liked her father. it was interesting to talk together because they had similiar topics of interest. </p>
         <h2> Today </h2>
         <p> She is happy to live with her children and her grandchildren (Me :D) </p>
+      </section>
     </section>
         
     <section id="photos" class="section">
@@ -71,25 +89,17 @@
     </section>
         
     <section id="like" class="section">
-        give me a like
-        
-        
-        <p>Click on the icon to toggle between thumbs-up and thumbs-down (like/dislike):</p>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-         style="width: 200px; height: 200px;">
-
-        <i onclick="myFunction(this)" class="fa fa-thumbs-up" style="font-size:36px" ></i>
-
-    <script>
-    function myFunction(x) {
-    x.classList.toggle("fa-thumbs-down");
-    }
-    </script>
-
-    </section>
+      <h2>Like or Dislike Buttons</h2>
+      You can choose whether you like this page this far or disliked.
+      <div class="like-buttons">
+          <i class="fa fa-thumbs-up like-btn" onclick="likeAnimation(this)" style="font-size:36px"></i>
+          <i class="fa fa-thumbs-down dislike-btn" onclick="dislikeAnimation(this)" style="font-size:36px"></i>
+      </div>
+  </section>
         
     <section id="qrcode" class="section">
-        scan my code
+        <h2>QR Code </h2>
+        <img src="photos/qrcode_img_static_git.PNG" width="300px" height="300px" > 
     </section>
         
     <section id="spa" class="section">
@@ -137,21 +147,73 @@
             <br>
             For example, saving words as vectors instead as words themselves in order to make words with similar meaning a close distance between each vector
         </p>
+
+        <h2><u>Question 2</u></h2>
+        <p>
+
+          One difference between web 1, web 3 can be explained through a use case :
+          <br>
+          For example, imagine we search for "side effect of a new medicine"
+          <br>
+          If we search this in web 1, we would get a static page about many other drugs, and we would have to extract from there by
+          ourselves information about the specific medicine we want.
+          <br>
+          In web 3, thourgh use of a the semantic web, we could get a page that can give us better results for the medicine that we
+          looked for, and this could be a page dedicated only to this specific medicine.
+          <br> we might even get a page of the company that produced this medicine and we could extract the information from There
+          and not from a random page in wikipedia.
+          <br> This is because through semantic web we can find similar words in meaning to the medicine we looked for, because of 
+          the words' vectors that this web represents.
+
+          <br>
+          <br>
+
+          Another difference we could see between web 1 and web 2 if we try to open a page for some social media, lets take
+          facebook for example.
+          <br>
+          If I would have opened a page of facebook in web 1 I would get a static page of a user, without the ability to comment,
+          share, or like/dislike any image or video that I would see there.
+          <br> In contrast, in web 2 the page would be dynamic, and I could do all the previous actions I have mentioned before
+          and it would be much more joyful and addictive.
+
+
+        </p>
         </div>
     </section>
         
     <section id="contact" class="section">
-        <p>
-           <h1>Contact Information</h1>
-            <h3>Email</h3>
-            If you would like to contact my grandmother you first need to contact me.
-            <br>
-            Here is my email if you would like to send a message : idanhefe@post.bgu.ac.il 
-            <br>
-            I prefer not to put my phone number here, if you do want it you can send me a mail and I will do the best I can.
+      <h1>Contact Form</h1>
+      <form id="contact-form">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+  
+          <label for="smiley">Select a Smiley:</label>
+          <select id="smiley" name="smiley">
+              <option value="😊">😊 Smiling</option>
+              <option value="😀">😀 Grinning</option>
+              <option value="😉">😉 Winking</option>
+              <option value="😎">😎 Cool</option>
+              <option value="😍">😍 Heart Eyes</option>
+          </select>
+  
+          <button type="submit">Send</button>
+      </form>
 
-        </p>
-    </section>
+      <p>
+        <h1>Contact Information</h1>
+         <h3>Email</h3>
+         If you would like to contact my grandmother you first need to contact me.
+         <br>
+         Here is my email if you would like to send a message : idanhefe@post.bgu.ac.il 
+         <br>
+         I prefer not to put my phone number here, if you do want it you can send me a mail and I will do the best I can.
+
+     </p>
+  </section>
+
         
         
     <script type="text/javascript">
@@ -166,6 +228,21 @@
          $(document).scroll(function() {
             $('#menu').toggle($(this).scrollTop()>1000)
          });​
+    </script>
+
+    <!-- Add the JavaScript code here -->
+    <script>
+        function likeAnimation(btn) {
+            btn.classList.toggle('liked');
+            const dislikeBtn = document.querySelector('.dislike-btn');
+            dislikeBtn.classList.remove('disliked');
+        }
+
+        function dislikeAnimation(btn) {
+            btn.classList.toggle('disliked');
+            const likeBtn = document.querySelector('.like-btn');
+            likeBtn.classList.remove('liked');
+        }
     </script>
 
 </body>
