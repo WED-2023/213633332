@@ -99,3 +99,175 @@ body {
     padding: 20px;
     text-align: center;
   }
+
+
+
+  /* for the like and dislike buttons : */
+
+  .like-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-btn,
+.dislike-btn {
+    font-size: 48px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-btn.liked {
+    color: green;
+    animation: likeAnimation 0.5s ease;
+}
+
+.dislike-btn.disliked {
+    color: red;
+    animation: dislikeAnimation 0.5s ease;
+}
+
+@keyframes likeAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1) translateY(-100px);
+    }
+}
+
+@keyframes dislikeAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1) translateY(50px);
+    }
+}
+
+
+
+/* Q&A Section */
+#spa {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	margin: 40px auto;
+	max-width: 800px;
+	border-radius: 8px;
+  }
+  
+  #spa h1 {
+	text-align: center;
+	margin-bottom: 30px;
+  }
+  
+  #spa h2 {
+	font-size: 24px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+  }
+  
+  #spa p {
+	line-height: 1.6;
+	text-align: justify;
+	margin-bottom: 20px;
+  }
+  
+  #spa u {
+	font-weight: bold;
+	color: #007bff;
+  }
+
+  /* more about section : */
+
+  #moreAbout {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	margin: 40px auto;
+	max-width: 800px;
+	border-radius: 8px;
+  }
+
+  #moreAbout h1 {
+	text-align: center;
+	margin-bottom: 30px;
+  }
+  
+  #moreAbout h2 {
+	font-size: 24px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+  }
+  
+  #moreAbout p {
+	line-height: 1.6;
+	text-align: justify;
+	margin-bottom: 20px;
+  }
+  
+  #moreAbout u {
+	font-weight: bold;
+	color: #007bff;
+  }
+
+
+  /* submit form */
+
+  /* Contact Form */
+#contact-form {
+    background-color: #f9f9f9;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    height: 150px;
+}
+
+#contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
