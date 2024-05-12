@@ -1,7 +1,101 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
-}
+
+
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #222;
+  }
+  
+  /* Navigation Bar */
+  .navigationBar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigationBar a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .navigationBar a:hover,
+  .navigationBar a.active {
+    color: #007bff;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .section:first-child {
+    background-image: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    padding: 120px 20px;
+    text-align: center;
+  }
+  
+  .section:first-child h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .section:first-child p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .rotate_right {
+    transform: rotate(90deg);
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
