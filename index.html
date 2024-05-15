@@ -93,38 +93,19 @@
     </section>
         
     <section id="like" class="section">
-      <h2>Like or Dislike Buttons</h2>
-      <!--
-
-      
-      You can choose whether you like this page this far or disliked.
-      <div class="like-buttons">
-          <i class="fa fa-thumbs-up like-btn" onclick="likeAnimation(this)" style="font-size:36px"></i>
-          <i class="fa fa-thumbs-down dislike-btn" onclick="dislikeAnimation(this)" style="font-size:36px"></i>
-      </div>
-      -->
-
-        <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
-             &version={graph-api-version}
-             &appId={your-facebook-app-id}" 
-        nonce="FOKrbAYI">
-  </script>
-
-  <!-- Your like button code -->
-  <div class="fb-like" 
-       data-href="https://wed-2023.github.io/213633332/" 
-       data-width=""
-       data-layout="standard" 
-       data-action="like" 
-       data-size="small"  
-       data-share="true">
-  </div>
-
-
-  </section>
+        <h2>Like or Dislike Buttons</h2>
+        You can choose whether you like this page so far or disliked.
+        <div class="like-buttons">
+            <div class="like-container">
+                <i class="fa fa-thumbs-up like-btn" onclick="likeAnimation(this)" style="font-size:36px"></i>
+                <span class="like-count">0</span>
+            </div>
+            <div class="dislike-container">
+                <i class="fa fa-thumbs-down dislike-btn" onclick="dislikeAnimation(this)" style="font-size:36px"></i>
+                <span class="dislike-count">0</span>
+            </div>
+        </div>
+    </section>
         
     <section id="qrcode" class="section">
         <h2>QR Code </h2>
@@ -261,18 +242,49 @@
 
     <!-- Add the JavaScript code here -->
     <script>
-        function likeAnimation(btn) {
-            btn.classList.toggle('liked');
-            const dislikeBtn = document.querySelector('.dislike-btn');
-            dislikeBtn.classList.remove('disliked');
-        }
+let likeCount = 0;
+let dislikeCount = 0;
 
-        function dislikeAnimation(btn) {
-            btn.classList.toggle('disliked');
-            const likeBtn = document.querySelector('.like-btn');
-            likeBtn.classList.remove('liked');
-        }
+function likeAnimation(btn) {
+    btn.classList.toggle('liked');
+    const dislikeBtn = document.querySelector('.dislike-btn');
+    dislikeBtn.classList.remove('disliked');
+
+    if (btn.classList.contains('liked')) {
+        likeCount++;
+        dislikeCount = 0;
+    } else {
+        likeCount--;
+    }
+
+    updateCounts();
+}
+
+function dislikeAnimation(btn) {
+    btn.classList.toggle('disliked');
+    const likeBtn = document.querySelector('.like-btn');
+    likeBtn.classList.remove('liked');
+
+    if (btn.classList.contains('disliked')) {
+        dislikeCount++;
+        likeCount = 0;
+    } else {
+        dislikeCount--;
+    }
+
+    updateCounts();
+}
+
+function updateCounts() {
+    const likeCountElement = document.querySelector('.like-count');
+    const dislikeCountElement = document.querySelector('.dislike-count');
+
+    likeCountElement.textContent = likeCount;
+    dislikeCountElement.textContent = dislikeCount;
+}
     </script>
+
+    
 
 </body>
 </html>
