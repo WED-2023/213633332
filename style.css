@@ -1,290 +1,324 @@
-
-
 /* General Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Typography */
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: #222;
-  }
-  
-  /* Navigation Bar */
-  .navigationBar {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navigationBar a {
-    color: #333;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .navigationBar a:hover,
-  .navigationBar a.active {
-    color: #007bff;
-  }
-  
-  /* Sections */
-  .section {
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  /* Hero Section */
-  .section:first-child {
-    background-image: linear-gradient(to right, #007bff, #0056b3);
-    color: #fff;
-    padding: 120px 20px;
-    text-align: center;
-  }
-  
-  .section:first-child h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .section:first-child p {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  
-  /* Images */
-  img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px;
-  }
-  
-  .rotate_right {
-    transform: rotate(90deg);
-  }
-  
-  /* Buttons */
-  .btn {
-    display: inline-block;
-    background-color: #fff;
-    color: #007bff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #e6e6e6;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
+  font-family: 'Montserrat', sans-serif;
+  color: #f8f8f2; /* Dracula foreground color */
+  background-color: #282a36; /* Dracula background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #ff79c6; /* Dracula pink color for headings */
+}
 
 
+/* Navigation Bar */
+.navigationBar {
+  background-color: #44475a; /* Dracula selection color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
 
-  /* for the like and dislike buttons : */
+.navigationBar a {
+  color: #f8f8f2; /* Dracula foreground color for navigation links */
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
 
-  .like-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navigationBar a:hover,
+.navigationBar a.active {
+  color: #ff79c6; /* Dracula pink color for active/hovered navigation links */
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Hero Section */
+.section:first-child {
+  background-image: linear-gradient(to right, #6272a4, #8be9fd); /* Dracula blue and cyan gradient for hero section */
+  color: #f8f8f2; /* Dracula foreground color */
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.section:first-child h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.section:first-child p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+.rotate_right {
+  transform: rotate(90deg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #50fa7b; /* Dracula green color for buttons */
+  color: #282a36; /* Dracula background color for text */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5af78e; /* Lighter shade of Dracula green for button hover */
+}
+
+/* Footer */
+footer {
+  background-color: #44475a; /* Dracula selection color for footer */
+  color: #f8f8f2; /* Dracula foreground color */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Like and Dislike Buttons */
+.like-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .like-btn,
 .dislike-btn {
-    font-size: 48px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  font-size: 48px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .like-btn.liked {
-    color: green;
-    animation: likeAnimation 0.5s ease;
+  color: #50fa7b; /* Dracula green color for liked button */
+  animation: likeAnimation 0.5s ease;
 }
 
 .dislike-btn.disliked {
-    color: red;
-    animation: dislikeAnimation 0.5s ease;
+  color: #ff5555; /* Dracula red color for disliked button */
+  animation: dislikeAnimation 0.5s ease;
 }
 
 @keyframes likeAnimation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1) translateY(-100px);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1) translateY(-100px);
+  }
 }
 
 @keyframes dislikeAnimation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1) translateY(50px);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1) translateY(50px);
+  }
 }
-
-
 
 /* Q&A Section */
 #spa {
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	padding: 40px;
-	margin: 40px auto;
-	max-width: 800px;
-	border-radius: 8px;
-  }
-  
-  #spa h1 {
-	text-align: center;
-	margin-bottom: 30px;
-  }
-  
-  #spa h2 {
-	font-size: 24px;
-	margin-top: 30px;
-	margin-bottom: 10px;
-  }
-  
-  #spa p {
-	line-height: 1.6;
-	text-align: justify;
-	margin-bottom: 20px;
-  }
-  
-  #spa u {
-	font-weight: bold;
-	color: #007bff;
-  }
+  background-color: #44475a; /* Dracula selection color for Q&A section */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
 
-  /* more about section : */
+#spa h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-  #moreAbout {
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	padding: 40px;
-	margin: 40px auto;
-	max-width: 800px;
-	border-radius: 8px;
-  }
+#spa h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
-  #moreAbout h1 {
-	text-align: center;
-	margin-bottom: 30px;
-  }
-  
-  #moreAbout h2 {
-	font-size: 24px;
-	margin-top: 30px;
-	margin-bottom: 10px;
-  }
-  
-  #moreAbout p {
-	line-height: 1.6;
-	text-align: justify;
-	margin-bottom: 20px;
-  }
-  
-  #moreAbout u {
-	font-weight: bold;
-	color: #007bff;
-  }
+#spa p {
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
 
+#spa u {
+  font-weight: bold;
+  color: #8be9fd; /* Dracula cyan color for underlined text */
+}
 
-  /* submit form */
+/* More About Section */
+#moreAbout {
+  background-color: #44475a; /* Dracula selection color for More About section */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
 
-  /* Contact Form */
+#moreAbout h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#moreAbout h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#moreAbout p {
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+#moreAbout u {
+  font-weight: bold;
+  color: #8be9fd; /* Dracula cyan color for underlined text */
+}
+
+/* Contact Form */
 #contact-form {
-    background-color: #f9f9f9;
-    padding: 40px;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #44475a; /* Dracula selection color for contact form */
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #contact-form h1 {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 #contact-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 #contact-form input,
 #contact-form textarea,
 #contact-form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6272a4; /* Dracula blue color for input borders */
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #282a36; /* Dracula background color for inputs */
+  color: #f8f8f2; /* Dracula foreground color for input text */
 }
 
 #contact-form textarea {
-    height: 150px;
+  height: 150px;
 }
 
 #contact-form button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #50fa7b; /* Dracula green color for submit button */
+  color: #282a36; /* Dracula background color for text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 #contact-form button:hover {
-    background-color: #0056b3;
+  background-color: #5af78e; /* Lighter shade of Dracula green for submit button hover */
 }
 
-
-
-/*    The css of the like and dislike couters    */
-
+/* Like and Dislike Counters */
 .like-container,
 .dislike-container {
-    display: flex;
-    align-items: center;
-    margin: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
 }
 
 .like-count,
 .dislike-count {
-    font-size: 24px;
-    margin-left: 10px;
+  font-size: 24px;
+  margin-left: 10px;
+  color: #f8f8f2; /* Dracula foreground color for counters */
+}
+
+/* Code Blocks */
+pre {
+  background-color: #44475a; /* Dracula selection color for code blocks */
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #f8f8f2; /* Dracula foreground color for code */
+}
+
+/* Links */
+a {
+  color: #8be9fd; /* Dracula cyan color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff79c6; /* Dracula pink color for link hover */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #44475a; /* Dracula selection color for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6272a4; /* Dracula blue color for scrollbar thumb */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8be9fd; /* Dracula cyan color for scrollbar thumb hover */
 }
