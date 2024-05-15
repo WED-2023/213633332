@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     style="width: 200px; height: 200px;">
 
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
 </head>
 <body>
 
@@ -90,11 +94,36 @@
         
     <section id="like" class="section">
       <h2>Like or Dislike Buttons</h2>
+      <!--
+
+      
       You can choose whether you like this page this far or disliked.
       <div class="like-buttons">
           <i class="fa fa-thumbs-up like-btn" onclick="likeAnimation(this)" style="font-size:36px"></i>
           <i class="fa fa-thumbs-down dislike-btn" onclick="dislikeAnimation(this)" style="font-size:36px"></i>
       </div>
+      -->
+
+        <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
+             &version={graph-api-version}
+             &appId={your-facebook-app-id}" 
+        nonce="FOKrbAYI">
+  </script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" 
+       data-href="https://wed-2023.github.io/213633332/" 
+       data-width=""
+       data-layout="standard" 
+       data-action="like" 
+       data-size="small"  
+       data-share="true">
+  </div>
+
+
   </section>
         
     <section id="qrcode" class="section">
