@@ -97,10 +97,18 @@
     </section>
         
     <section id="like" class="section">
-        <h2>Like or Shate Buttons</h2>
-        You can choose whether you like this page so far and share.
-        <br>
-        <div style="color: aliceblue; background-color: aliceblue;" class="fb-like" data-href="https://wed-2023.github.io/213633332/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+        <h2>Like or Dislike Buttons</h2>
+        You can choose whether you like this page this far or disliked.
+        <div class="like-buttons">
+            <div class="like-container">
+                <i class="fa fa-thumbs-up like-btn" onclick="likeAnimation(this)" style="font-size:36px"></i>
+                <span class="like-count">0</span>
+            </div>
+            <div class="dislike-container">
+                <i class="fa fa-thumbs-down dislike-btn" onclick="dislikeAnimation(this)" style="font-size:36px"></i>
+                <span class="dislike-count">0</span>
+            </div>
+        </div>
     </section>
         
     <section id="qrcode" class="section">
