@@ -16,6 +16,10 @@
 </head>
 <body>
 
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="FZuaQ3Pi"></script>
+
+
     <div id="menu" class="navigationBar" >
         <a href="#about">About Me</a>
         <a href="#photos">My Photos</a>
@@ -93,18 +97,10 @@
     </section>
         
     <section id="like" class="section">
-        <h2>Like or Dislike Buttons</h2>
-        You can choose whether you like this page so far or disliked.
-        <div class="like-buttons">
-            <div class="like-container">
-                <i class="fa fa-thumbs-up like-btn" onclick="likeAnimation(this)" style="font-size:36px"></i>
-                <span class="like-count">0</span>
-            </div>
-            <div class="dislike-container">
-                <i class="fa fa-thumbs-down dislike-btn" onclick="dislikeAnimation(this)" style="font-size:36px"></i>
-                <span class="dislike-count">0</span>
-            </div>
-        </div>
+        <h2>Like or Shate Buttons</h2>
+        You can choose whether you like this page so far and share.
+        <br>
+        <div style="color: aliceblue; background-color: aliceblue;" class="fb-like" data-href="https://wed-2023.github.io/213633332/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
     </section>
         
     <section id="qrcode" class="section">
@@ -192,37 +188,58 @@
     </section>
         
     <section id="contact" class="section">
-      <h1>Contact Form</h1>
-      <form id="contact-form">
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" required>
-  
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-  
-          <label for="smiley">Select a Smiley:</label>
-          <select id="smiley" name="smiley">
-              <option value="😊">😊 Smiling</option>
-              <option value="😀">😀 Grinning</option>
-              <option value="😉">😉 Winking</option>
-              <option value="😎">😎 Cool</option>
-              <option value="😍">😍 Heart Eyes</option>
-          </select>
-  
-          <button type="submit">Send</button>
-      </form>
-
-      <p>
-        <h1>Contact Information</h1>
-         <h3>Email</h3>
-         If you would like to contact my grandmother you first need to contact me.
-         <br>
-         Here is my email if you would like to send a message : idanhefe@post.bgu.ac.il 
-         <br>
-         I prefer not to put my phone number here, if you do want it you can send me a mail and I will do the best I can.
-
-     </p>
-  </section>
+        <h1>Contact Form</h1>
+        <form id="contact-form">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <label for="smiley">Select a Smiley:</label>
+            <select id="smiley" name="smiley">
+                <option value="😊">😊 Smiling</option>
+                <option value="😀">😀 Grinning</option>
+                <option value="😉">😉 Winking</option>
+                <option value="😎">😎 Cool</option>
+                <option value="😍">😍 Heart Eyes</option>
+            </select>
+    
+            <button type="submit">Send</button>
+        </form>
+    
+        <p>
+            <h1>Contact Information</h1>
+            <h3>Email</h3>
+            If you would like to contact my grandmother you first need to contact me.<br>
+            Here is my email if you would like to send a message : idanhefe@post.bgu.ac.il <br>
+            I prefer not to put my phone number here, if you do want it you can send me a mail and I will do the best I can.
+        </p>
+    </section>
+    
+    <script>
+        // Function to handle form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Get user input values
+            var userEmail = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var smiley = document.getElementById("smiley").value;
+    
+            // Construct email body
+            var emailBody = "From: " + userEmail + "\n" + "Message: " + message + "\n" + "Smiley: " + smiley;
+    
+            // Construct mailto URL with the destination email address
+            var mailtoURL = "mailto:idanhefe@post.bgu.ac.il?subject=Contact%20Me%20Please&body=" + encodeURIComponent(emailBody);
+    
+            // Open mail client with the mailto URL
+            window.location.href = mailtoURL;
+    
+            // Display alert message
+            alert("Your message has been sent successfully!");
+        });
+    </script>
 
         
         
@@ -285,6 +302,7 @@ function updateCounts() {
     </script>
 
     
+
 
 </body>
 </html>
